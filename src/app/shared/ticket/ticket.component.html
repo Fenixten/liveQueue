@@ -1,0 +1,11 @@
+<div class="ticket-block">
+  <div class="ticket-block__header">
+    <span class="title">{{ticket.type.code + ' ' + ticket.id}}</span>
+  </div>
+  <div class="ticket-block__body">
+    <label for="text">Описание талона</label>
+    <textarea id="text" readonly [textContent]="ticket.descr"></textarea>
+    <label for="time">Время приёма</label>
+    <p id="time">{{ticket.dateTime | date: 'dd.MM.yy HH:mm:ss'}}</p>
+  </div>
+</div>

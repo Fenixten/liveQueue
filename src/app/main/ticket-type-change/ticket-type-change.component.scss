@@ -1,0 +1,15 @@
+.full-table {
+  width: 100%;
+  height: 100%;
+}
+.column {
+  font-size: 1.2rem;
+  border: 1px solid #000000;
+
+  &__w-23 {
+    width: 23.3%;
+  }
+  &__w-20 {
+    width: 20%;
+  }
+}

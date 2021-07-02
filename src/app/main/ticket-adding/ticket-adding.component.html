@@ -1,0 +1,30 @@
+<div class="ticket-block">
+  <div class="ticket-block__header">
+    <input id="typeId" class="title" readonly [ngModel]="ticket.type.id">
+    <label for="id" class="title">Id талона: </label>
+    <input id="id" class="title" [(ngModel)]="ticket.id">
+  </div>
+  <div class="ticket-block__body">
+    <label>Выберите тип талона</label>
+    <div class="select-row">
+      <select class="title" [(ngModel)]="ticket.type.id" (change)="typeChange($event)">
+        <option *ngFor="let item of ticketTypes">{{item.id}}</option>
+      </select>
+      <input readonly class="select-row__content title" [ngModel]="ticket.type.code">
+      <input readonly class="select-row__content title" [ngModel]="ticket.type.name">
+    </div>
+
+    <label for="text">Описание талона</label>
+    <input id="text" type="text" class="title" [(ngModel)]="ticket.descr">
+    <label>Время приёма</label>
+    <div class="select-row">
+      <input id="date" class="select-row__content title" type="date" [(ngModel)]="date" (change)="dateTransform()">
+      <input id="time" class="select-row__content title" type="time" [(ngModel)]="time" (change)="timeTransform()">
+    </div>
+    <!--input id="time" type="datetime-local" [(ngModel)]="ticket.dateTime" (change)="dateTransform()"-->
+  </div>
+  <div class="ticket-block__footer">
+    <button class="btn" (click)="saveTicket()">Сохранить</button>
+    <button class="btn" (click)="clear()">Сбросить</button>
+  </div>
+</div>

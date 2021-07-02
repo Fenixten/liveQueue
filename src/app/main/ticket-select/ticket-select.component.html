@@ -1,0 +1,8 @@
+<div class="tickets">
+  <p *ngIf="!tickets.length" class="tickets__text">Талонов не найдено</p>
+  <div *ngIf="tickets.length" class="tickets__columns">
+    <ng-container *ngFor="let item of firstTickets">
+      <app-ticket [ticket]="item"></app-ticket>
+    </ng-container>
+  </div>
+</div>

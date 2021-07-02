@@ -1,0 +1,23 @@
+<table class="full-table">
+  <thead>
+    <tr>
+      <td class="column column__w-23"><span>ID</span></td>
+      <td class="column column__w-23"><span>Название</span></td>
+      <td class="column column__w-23"><span>Код</span></td>
+      <td class="column column__w-20">
+        <button class="btn" (click)="addNewType()">Создать новый тип</button>
+      </td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let type of ticketTypes; let i = index">
+      <td class="column column__w-23"><span>{{type.id}}</span></td>
+      <td class="column column__w-23"><span>{{type.name}}</span></td>
+      <td class="column column__w-23"><span>{{type.code}}</span></td>
+      <td class="column column__w-20">
+        <button class="btn" (click)="changeType(i)">Редактировать</button>
+        <button class="btn" (click)="delType(i)">Удалить</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

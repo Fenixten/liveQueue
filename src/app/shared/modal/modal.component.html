@@ -1,0 +1,27 @@
+<div class="modal">
+  <div class="modal__backdrop">
+    <div class="modal__container">
+      <div class="modal__content">
+        <div class="modal__header">
+          <span>{{title}}</span>
+        </div>
+        <div class="modal__body">
+          <span *ngIf="type === 'confirm'">{{text}}</span>
+          <ng-container *ngIf="type === 'data'">
+            <label for="id">Id типа</label>
+            <input id="id" type="text" [(ngModel)]="ticketType.id">
+            <label for="code">Код типа</label>
+            <input id="code" type="text" [(ngModel)]="ticketType.code">
+            <label for="name">Описание типа</label>
+            <input id="name" type="text" [(ngModel)]="ticketType.name">
+          </ng-container>
+        </div>
+        <div class="modal__footer">
+          <button class="btn btn-ok" (click)="ok()">Применить</button>
+          <button class="btn btn-cancel" (click)="cancel()">Отмена</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

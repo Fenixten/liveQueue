@@ -1,0 +1,43 @@
+.ticket-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid #000000;
+
+  &__header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px solid #000000;
+  }
+
+  &__body {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: 40px;
+    border-top: 1px solid black;
+    text-align: center;
+  }
+}
+
+.select-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  &__content {
+    margin-right: 15px;
+  }
+}
+
+.title {
+  margin: 10px;
+  font-size: 1.2rem;
+}
